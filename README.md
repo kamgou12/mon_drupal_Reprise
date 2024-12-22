@@ -25,7 +25,7 @@
   
 
 ### Capture d’écran
-![Vérification de l’installation Docker](../mon_drupal_Reprise/TP2Rep/version_Docker.PNG.png)
+![Vérification de l’installation Docker](TP2Rep/version_Docker.PNG)
 
 ## Étape 2 : Création de conteneurs
 
@@ -45,7 +45,7 @@
 - Vérification des conteneurs :
  
   docker ps
-![Vérification des  conteneurs](../mon_drupal_Reprise/TP2Rep/conteneurmongo_apache.PNG)
+![Vérification des  conteneurs](TP2Rep/conteneurmongo_apache.PNG)
 
 ## Étape 3 : Construction personnalisée d'une image pour Drupal
 
@@ -95,13 +95,13 @@ RUN git clone --branch 5.0.x --single-branch --depth 1 https://git.drupalcode.or
  
    docker run -d --name mon_postgresql --network mon_reseau -v drupal-data:/var/lib/postgresql/data mon_postgresql_image
    docker run -d --name mon_drupal --network mon_reseau -p 8080:80 mon_drupal_image
-![Validations des conteneurs en marche](../mon_drupal_Reprise/TP2Rep/containeurs.PNG)
+![Validations des conteneurs en marche](TP2Rep/containeurs.PNG)
 
 ## Étape 4 : Accéder à l'application Drupal
 
 1. Dans firefox  access a drupal depuis mon seveur sur mon client  à `http://10.100.2.10:8080`.
 2.-10.100.2.10 est l'address de mon serveur 
-![Vérificatione et validation de l'Access a drupal depuis mon serveur sur mon client](../mon_drupal_Reprise/TP2Rep/preuve_installation_config_drupal_postgresql.PNG)
+![Vérificatione et validation de l'Access a drupal depuis mon serveur sur mon client](TP2Rep/preuve_installation_config_drupal_postgresql.PNG)
 
 ## Sources
 - [Documentation officielle de Docker](https://docs.docker.com/)
